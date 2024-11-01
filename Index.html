@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Top-tier website showcasing a sleek design and responsive layout.">
+    <meta name="author" content="Your Name">
+    <meta name="keywords" content="professional, website, modern, responsive">
+    
+    <title>Glitch website</title>
+
+     
+     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Helvetica;
+            background-color: #f9f9f900;
+            color: #333;
+            line-height: 1.6;
+
+        } 
+
+        header {
+            display: flex;
+            background: linear-gradient(135deg, #ffffff, #ffffff);
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1em;
+        }
+
+        nav {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: lighter;
+           font-family: sans-serif;
+           word-spacing: 100%;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #000000;
+        }
+        
+        section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #000000;
+        }
+
+
+
+        section p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+
+
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            position: absolute;
+            top: 0; /* Stick to the top */
+            right: 0; /* Align to the right */
+            display: flex;
+            background-color: #ffffff;
+            padding: 15px;
+        }
+
+        /* Style for each navigation link */
+        .nav-link {
+            margin-left: 20px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 18px; 
+            transition: color 0.3s ease;
+            display: inline-block;
+            transition: transform 0.3s ease; /* Smooth transformation for bounce */
+        }
+
+        /* Hover effect for bounce animation */
+        .nav-link:hover {
+            color: #000000; /* Change color on hover */
+            animation: bounce 0.3s ease; /* Trigger bounce animation */
+        }
+
+        /* Bounce animation keyframes */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); /* Normal position */
+            }
+            50% {
+                transform: translateY(-10px); /* Move up by 10px */
+            }
+        }
+
+
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-box {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-box i {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        footer a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        
+        @media(max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            section p {
+                font-size: 1em;
+            }
+            
+        }
+
+
+        style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center;    
+            height: 100vh;         
+            margin: 0;             
+            background-color: #f4f4f4; 
+        }
+
+        
+        .bounce-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            background-color: #000000;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s; 
+            animation: none; 
+        }
+
+       
+        .bounce-button:hover {
+            background-color: #000000;
+            animation: bounce 0.3s ease;
+        }
+
+       
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); 
+            }
+            50% {
+                transform: translateY(-10px); 
+            }
+        }
+
+       
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            min-width: 100px;
+        }
+
+        /* Dropdown content links */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Show the dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hover effect for dropdown links */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Hover effect for navigation links */
+        .nav-link:hover {
+            background-color: #ffffff00;
+        }
+
+        .containing {
+            display: flex;
+            align-items: center; /* Aligns text vertically with the image */
+        }
+
+        /* Style for the image */
+        .containing img {
+            width: 550px; /* Adjust width as needed */
+            height: 750%;
+            margin-right: 15px; /* Space between image and text */
+        }
+
+        /* Style for the text */
+        .text {
+            font-size: 70%;
+            color: #000000;
+        
+        }
+
+
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .card-container h2 {
+            font-size: 100%;
+            margin-bottom: 0.5em;
+        }
+
+        .description {
+            font-size: 0.5em;
+            color: #000000;
+            margin-bottom: 2em;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+
+        .card {
+            flex: 1 1 45%;
+            background-color: white;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            padding: 0.5em;
+            max-width: 45%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 50%;
+            color: #000000;
+            margin-bottom: 0.5em;
+        }
+
+        .card p {
+            font-size: 40%;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .learn-more {
+            display: inline-block;
+            margin-top: 1em;
+            font-size: 50%;
+            color: #d9534f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .learn-more:hover {
+            text-decoration: underline;
+            
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+            }
+            
+            .card {
+                max-width: 100%;
+            }
+        }
+
+
+        .pricing-section {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            max-width: 900px;
+            padding: 2em;
+            
+        }
+
+        .text-content {
+            flex: 1;
+            max-width: 60%;
+        }
+
+        .text-content h2 {
+            font-size: 70%;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5em;
+        }
+
+        .text-content p {
+            font-size: 40%;
+            color: #000000;
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        .pricing-card {
+            flex: 1;
+            max-width: 300px;
+            max-height: 700px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 0.3em;
+            text-align: center;
+            
+        }
+
+        .pricing-card h3 {
+            font-size: 65%;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5em;
+        }
+
+        .pricing-card p {
+            font-size: 50%;
+            color: #5cb85c; /* color for the feature text */
+            margin-bottom: 2em;
+        }
+
+        .pricing-card .price-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.1em 1.5em;
+            border-radius: 5px;
+            font-size: 50%;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .pricing-card .price-button:hover {
+            background-color: #555;
+        }
+
+
+
+        .contains {
+            text-align: center;
+            color: #000000;
+        }
+
+        h1 {
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+        }
+
+         .contains p {
+            font-size: 0.5em;
+            color: #6b6b6b;
+            margin-bottom: 1.5em;
+        }
+
+
+        .button-contains {
+            display: flex;
+            gap: 0.7em;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.8em 1.5em;
+            font-size: 40%;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2em;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0066ff;
+            margin-bottom: 0.5em;
+        }
+
+        .footer-left p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-section h3 {
+            font-size: 1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5em;
+        }
+
+        .footer-section a {
+            font-size: 0.9em;
+            color: #666;
+            text-decoration: none;
+            margin: 0.3em 0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #333;
+        }
+
+        .footer-center {
+            display: flex;
+            gap: 2em;
+        }
+
+        .close-icon {
+            font-size: 1.5em;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-icon:hover {
+            color: #666;
+        }
+        
+
+       
+
+
+
+
+
+
+
+        
+        
+       
+    </style>
+</head>
+<body>
+    
+    
+        
+    </style>
+
+    <!-- External Resources: Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <!-- Header -->
+    <header>
+        <h1>Glitch</h1>
+        <p></p>
+    </header>
+    
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a class="nav-link">Features</a>
+
+            <div class="dropdown">
+                <a href="#" class="nav-link">Resources</a>
+                <div class="dropdown-content">
+                    <a href="#">FAQ</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Support</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+
+        <a class="nav-link">Pricing</a>
+       <button> <a class="nav-link">Sign in</a> </button>
+    </nav>
+
+    <!-- Main Content -->
+    <section id="home">
+        <h2>"Glitch: Securing Your Digital World"</h2>
+        <p>Glitch is a cutting-edge cybersecurity company specializing in <br>
+            protecting businesses from digital threats. <br>
+             Our innovative solutions ensure robust defense against cyberattacks,  <br>
+              securing your data and systems with confidence.  </p>  
+              <h2><button class="bounce-button">Join the Waitlist</button><h2>
+        
+    </section>
+    
+
+    <!-- Services Section with Icons -->
+    <section id="services">
+        <h2>Our Solutions</h2>
+        <div class="features">
+            <div class="feature-box">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Managed Security Services (MSS):</h3>
+                <p> Continuous monitoring and management of an organization's security systems and devices.<br> 
+                    This can include real-time threat detection, incident response. <br> </p>
+                    <img src="PICS/MSSP" alt="PICS" width="300" height="200">
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Penetration Testing and Vulnerability Assessments: </h3>
+                <p>Testing and assessing an organization's systems to identify security weaknesses and <br> 
+                    potential vulnerabilities that could be exploited by attackers.<br></p>
+                    <img src="PICS/Penetration Testing and Vulnerability Assessments" alt="PICS" width="300" height="200">
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-chart-line"></i>
+                <h3>Consulting and Compliance Services:</h3>
+                <p> Providing expert advice on improving cybersecurity practices <br>
+                    and helping organizations comply with regulatory requirements, <br>
+                    such as GDPR, HIPAA.<br></p>
+                    <img src="PICS/Consulting and Compliance Services" alt="PICS" width="300" height="200">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Identify and Fix Vulnerabilities Faster</h2>
+        <p>Our services are designed to connect top security researchers with businesses, <br>
+            so we can identify and fix vulnerabilities faster. </p>
+            <h3>Trust</h3>
+        <p>We prioritize trust in our relationships with businesses <br>
+            and researchers.</p>
+    </section>
+
+    <section id="home">
+        <h2>Securing the African market</h2>
+        <p>Addressing unique challenges in coordinated <br>
+            vulnerability disclosures with our tailored, industry-<br>
+            leading platform.</p>
+        <div class="containing">
+            <i class="fas fa-mobile-alt"></i>
+                <img src="PICS/business acct" alt="PICS" width="400" height="600">
+                <div class="text"> 
+                    <h2><b>EMPOWER SECURITY RESEARCHERS</b></h2>
+                    <p>Our platform empowers security researchers to<br>
+                         responsibly report vulnerabilities and contribute to<br>
+                         a safer digital ecosystem.</p><br>
+                     <h2><b>PROTECT YOUR BUSINESS</b></h2>
+                    <p>We help companies identify and fix vulnerabilities <br>
+                         faster, ensuring the security of your business- <br>
+                         critical assets.<br>
+                         <h2><b>LEVERAGE COMMUNITY STRENGTH</b></h2>
+                    <P>Our bug bounty program leverages the strength of <br>
+                         a community of skilled researchers, providing a  <br>
+                         collaborative approach to vulnerability discovery  <br>
+                         and resolution. <br></P> 
+                    </p>
+                    </div>
+        </div> 
+       
+
+       
+              <h2><button class="bounce-button">Join the Waitlist</button><h2> <br>
+
+                <div class="card-container">
+                    <h2>What we provide for your company </h2>
+                    <p class="description">
+                        Our cybersecurity company offers comprehensive protection solutions to safeguard your business against digital threats, ensuring the security of your data and the continuity of your operations.
+                    </p>
+                    <div class="card-container">
+                        <div class="card">
+                            <h3>Identify and Fix Vulnerabilities Faster</h3>
+                            <p>Our cybersecurity services enable companies to identify and fix vulnerabilities faster, reducing the time between threat detection and resolution. By implementing real-time monitoring and rapid remediation.</p>
+                            <a href="#" class="learn-more">Learn more →</a>
+                        </div>
+                        <div class="card">
+                            <h3>Repairing Trust</h3>
+                            <p>Our cybersecurity company is dedicated to repairing trust by bridging the gap between businesses and security researchers,
+                                fostering transparent communication and responsible vulnerability disclosure.</p>
+                            <a href="#" class="learn-more">Learn more →</a>
+                        </div>
+                        <div class="card">
+                            <h3>Reducing your Attack Surface Area</h3>
+                            <p>Reducing your attack surface area is essential for a company as it minimizes vulnerabilities and potential entry points for cyber threats,
+                                 enhancing overall security posture and protecting client data.</p>
+                            <a href="#" class="learn-more">Learn more →</a>
+                        </div>
+                        <div class="card">
+                            <h3>Compensation for Researchers</h3>
+                            <p>In a cybersecurity company, fair compensation for researchers is essential to attract and retain top talent, 
+                                ensuring the continuous development of innovative security solutions 
+                                and the protection of sensitive data against evolving threats.</p>
+                            <a href="#" class="learn-more">Learn more →</a>
+                        </div>
+                    </div>
+                </div> <br>
+
+                <div class="pricing-section">
+                    <!-- Left Text Content -->
+                    <div class="text-content">
+                        <h2  style="text-align: left; margin-left: 0;">Simple and Fair Pricing for Organizations</h2>
+                        <p style="text-align: left; margin-left: 0;">Our pricing is budget-friendly, offers scalability, has a global reach, and provides customized Enterprise Plans to suit your specific needs.<br>
+                              <p>Feel free to reach out via email: <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">oluwanifemijosiah02@gmail.com</a></p></p>
+                    
+                    </div>
+            
+                    <!-- Right Pricing Card -->
+                    <div class="pricing-card">
+                        <h3>$ /year</h3>
+                        <p>✔ All features</p>
+                        <a href="#" class="price-button">Start now</a>
+                    </div>
+                </div>
+
+                <div class="contains">
+                    <h1>Give it a try</h1>
+                    <p>Create a free account and explore the power of Glitch.</p>
+                    <div class="button-container">
+                        <button class="btn">Sign up as a individual</button>
+                        <button class="btn">Sign up as an organization</button>
+                    </div>
+                </div>
+        
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <div class="logo">Glitch</div>
+            <p>&copy; 2024 Glitch, Inc.</p>
+        </div>
+        <div class="footer-center">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+                <a href="#">FAQ</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="#">About us</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact us</a>
+            </div>
+        </div>
+        <div class="close-icon">X</div>
+    </footer>
+
+
+
+    
+
+</body>
+</html>
